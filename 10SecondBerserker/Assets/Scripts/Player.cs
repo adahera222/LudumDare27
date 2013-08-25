@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public Texture2D _healthTexture2D, _backTexture2D;
     private const float MaxHealth = 100;
     private float health = 100;
+    public AudioClip clip;
 
     // Use this for initialization
 	void Start ()
@@ -81,6 +82,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Blocker"))
         {
+            audio.PlayOneShot(clip);
             var mag = Vector3.Magnitude(collision.gameObject.rigidbody.velocity);
             _camera.SendMessage("CameraShake", new Vector2(mag*0.5f, 0.5f));
 

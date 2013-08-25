@@ -14,10 +14,11 @@ public class Manager : MonoBehaviour
     private List<GameObject> ballSpawnPoints, blockerSpawnPoints;
     private GameObject playerSpawn;
     private bool gameover = false;
+    
     // Use this for initialization
 	
     void Start () {
-
+       
         retryBtn.enabled = false;
 
         DontDestroyOnLoad(this);
