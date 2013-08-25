@@ -44,9 +44,9 @@ public class Shake : MonoBehaviour
 	        }
 	        else
 	        {
-	            float prog = _shakeTimer/_duration;
+	            var prog = _shakeTimer/_duration;
 
-	            float magnitude = _magnitude*(1f - (prog*prog));
+	            var magnitude = _magnitude*(1f - (prog*prog));
 
 	            _shakeOffset = new Vector3(NextFloat(), NextFloat(), NextFloat())*magnitude;
 

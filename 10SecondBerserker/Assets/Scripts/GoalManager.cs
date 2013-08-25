@@ -8,7 +8,7 @@ public class GoalManager : MonoBehaviour
 {
 
     private int _score;
-    public GUIStyle Style;
+    public GUIStyle Style, FSstyle;
     private bool gameOver = false;
     public AudioClip clip;
     private float timer = 2;
@@ -29,6 +29,8 @@ public class GoalManager : MonoBehaviour
         GUI.Label(new Rect(10, 10 , 100, 100), "Score : " +  _score.ToString(CultureInfo.InvariantCulture) , Style);
         if (scored)
             GUI.Label(new Rect(Screen.width / 2 - width, Screen.height / 2 - height, width, height), "G O A L !!!", ScoreStyle);
+        if (gameOver)
+            GUI.Label(new Rect(Screen.width / 2 - width * 1.6f, Screen.height / 2 + height * 1.5f, width, height), "Final Score: " + _score, FSstyle);
     }
 	
 	// Update is called once per frame
