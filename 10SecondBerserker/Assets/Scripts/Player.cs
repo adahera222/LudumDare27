@@ -37,6 +37,13 @@ public class Player : MonoBehaviour
                     (health/(float) MaxHealth*_healthTexture2D.width), _healthTexture2D.height), _healthTexture2D);
         }
     }
+
+    void Reset()
+    {
+        Debug.Log("Player reset");
+        health = 100;
+        driveSpeed = 20;
+    }
 	
 	// Update is called once per frame
 	void Update () {

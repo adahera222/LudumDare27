@@ -2,8 +2,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class Blocker : MonoBehaviour {
-    
+public class Blocker : MonoBehaviour
+{
+
     private float DriveSpeed = 20.0f;
     private GameObject _targetGameObject;
     private bool reverse = false;
@@ -16,7 +17,10 @@ public class Blocker : MonoBehaviour {
 	    _targetGameObject = GameObject.FindGameObjectWithTag("Player");
 	}
 
-    
+    public void Reset()
+    {
+        DriveSpeed = 20;
+    }
 	
 	// Update is called once per frame
 	void Update () {
