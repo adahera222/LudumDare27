@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     private int width = 36, height = 50;
     private List<GameObject> ballSpawnPoints, blockerSpawnPoints;
     private GameObject playerSpawn;
+    private bool gameover = false;
     // Use this for initialization
 	
     void Start () {
@@ -32,6 +33,7 @@ public class Manager : MonoBehaviour
 
     public void GameOver()
     {
+        gameover = true;
         instBlocker.SendMessage("GameOver", SendMessageOptions.RequireReceiver);
         instPlayer.SendMessage("GameOver", SendMessageOptions.RequireReceiver);
     }
@@ -39,7 +41,7 @@ public class Manager : MonoBehaviour
 	// Update is called once per frame
     private void Update()
     {
-        if (start >= 0)
+        if (start >= 0 && gameover != true)
         {
             start -= Time.deltaTime;
         }

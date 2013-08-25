@@ -6,6 +6,8 @@ TagManager:
   - ballspawn
   - blockerspawn
   - playerSpawn
+  - blocker
+  - manager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

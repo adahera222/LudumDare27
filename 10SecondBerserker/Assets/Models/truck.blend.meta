@@ -1,43 +1,20 @@
 fileFormatVersion: 2
-guid: 9d43010717f5a404a8736bc29ff0f0a0
+guid: e16141efd3f33c646a4cacff5e46aea7
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Plane
-    100004: Plane_001
-    100006: playingpitch
-    100008: walls
-    100010: container
-    400000: //RootNode
-    400002: Plane
-    400004: Plane_001
-    400006: playingpitch
-    400008: walls
-    400010: container
-    2300000: //RootNode
-    2300002: Plane
-    2300004: Plane_001
-    2300006: playingpitch
-    2300008: walls
-    2300010: container
-    3300000: //RootNode
-    3300002: Plane
-    3300004: Plane_001
-    3300006: playingpitch
-    3300008: walls
-    3300010: container
-    4300000: Plane
-    4300002: Plane_001
-    4300004: playingpitch
-    4300006: walls
-    4300008: container
-    6400000: //RootNode
-    6400002: Plane
-    6400004: Plane_001
-    6400006: playingpitch
-    6400008: walls
-    6400010: container
+    100000: CHASSIS
+    100002: Torus_001
+    100004: //RootNode
+    400000: CHASSIS
+    400002: Torus_001
+    400004: //RootNode
+    2300000: CHASSIS
+    2300002: Torus_001
+    3300000: CHASSIS
+    3300002: Torus_001
+    4300000: Torus_001
+    4300002: CHASSIS
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -58,10 +35,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -71,8 +48,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 0
-    normalImportMode: 1
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
