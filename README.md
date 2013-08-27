@@ -1,8 +1,7 @@
 LudumDare27
 ===========
 
-Original and unchanged source is under the LD27 Jam submission branch.
+Should also meantion that the camera shake was based and slightly modified version of the
+XNA code samples http://xbox.create.msdn.com/en-US/education/catalog/sample/camera_shake
 
-https://github.com/wtarr/LudumDare27/tree/LD27-Jam-submission
-
-===========
+This is the reason this submission was for the JAM and not the 48hour contest.
