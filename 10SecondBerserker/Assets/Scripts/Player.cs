@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     private Camera _camera;
     private GameObject _manager;
     private bool shake = true;
-    private float driveSpeed = 20.0f;
-    private const float RotateSpeed = 5f;
+    private float driveSpeed = 1500.0f;
+    private const float RotateSpeed = 250f;
     public Texture2D _healthTexture2D, _backTexture2D;
     private const float MaxHealth = 100;
     private float health = 100;
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player reset");
         health = 100;
-        driveSpeed = 20;
+        driveSpeed = 1500;
     }
 	
 	// Update is called once per frame
@@ -51,26 +51,29 @@ public class Player : MonoBehaviour
 
 	    if (Input.GetKey(KeyCode.W))
 	    {
-	        rigidbody.AddForce(transform.forward * driveSpeed);
+	        rigidbody.AddForce(transform.forward * driveSpeed * Time.deltaTime);
 	    }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidbody.AddForce(transform.forward * -driveSpeed);
+            rigidbody.AddForce(transform.forward * -driveSpeed * Time.deltaTime);
         }
 
 	    if (Input.GetKey(KeyCode.A))
 	    {
-	        transform.Rotate(transform.up, -RotateSpeed);
+            transform.Rotate(transform.up, -RotateSpeed * Time.deltaTime);
 	    }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(transform.up, RotateSpeed);
+            transform.Rotate(transform.up, RotateSpeed * Time.deltaTime);
         }
-
-       
 	}
+
+    void FixedUpdate()
+    {
+        
+    }
 
     public void GameOver()
     {

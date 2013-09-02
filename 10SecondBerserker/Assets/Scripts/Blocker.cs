@@ -5,7 +5,7 @@ using System.Collections;
 public class Blocker : MonoBehaviour
 {
 
-    private float DriveSpeed = 20.0f;
+    private float DriveSpeed = 1400.0f;
     private GameObject _targetGameObject;
     private bool reverse = false;
     private float countdown = 0.5f;
@@ -19,7 +19,7 @@ public class Blocker : MonoBehaviour
 
     public void Reset()
     {
-        DriveSpeed = 20;
+        DriveSpeed = 1400;
     }
 	
 	// Update is called once per frame
@@ -29,7 +29,7 @@ public class Blocker : MonoBehaviour
 	    if (reverse)
 	    {
 	        countdown -= Time.deltaTime;
-            rigidbody.AddForce(transform.forward * DriveSpeed * -0.5f);
+            rigidbody.AddForce(transform.forward * DriveSpeed * -0.5f * Time.deltaTime);
 
 	        if (countdown <= 0)
 	        {
@@ -40,7 +40,7 @@ public class Blocker : MonoBehaviour
 	    }
 	    else
 	    {
-            rigidbody.AddForce(transform.forward * DriveSpeed);    
+            rigidbody.AddForce(transform.forward * DriveSpeed * Time.deltaTime);    
 	    }
         
         
